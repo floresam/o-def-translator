@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:odef="http://o-def.info/core#">
+
+<!-- DESCRIPTION RDF RESOURCES -->
+
+<!-- ObjectClass -->
+    <rdf:Description rdf:about="http://o-def.info/core#ObjectClass">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+<!-- Role -->
+    <rdf:Description rdf:about="http://o-def.info/core#Role">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+<!-- Property -->
+    <rdf:Description rdf:about="http://o-def.info/core#Property">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+<!-- Plugin -->
+    <rdf:Description rdf:about="http://o-def.info/core#Plugin">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+<!-- Objects -->
+    <rdf:Description rdf:about="http://o-def.info/core#Objects">
+        <rdf:type rdf:resource="http://o-def.info/core/ObjectClass"/>
+    </rdf:Description>
+
+<!-- Roles -->
+    <rdf:Description rdf:about="http://o-def.info/core#Roles">
+        <rdf:type rdf:resource="http://o-def.info/core/Role"/>
+    </rdf:Description>
+
+<!-- Properties -->
+    <rdf:Description rdf:about="http://o-def.info/core#Properties">
+        <rdf:type rdf:resource="http://o-def.info/core/Property"/>
+    </rdf:Description>
+
+<!-- id -->
+    <rdf:Description rdf:about="http://o-def.info/core#id">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- name -->
+    <rdf:Description rdf:about="http://o-def.info/core#name">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- description -->
+    <rdf:Description rdf:about="http://o-def.info/core#description">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- uri -->
+    <rdf:Description rdf:about="http://o-def.info/core#uri">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- language -->
+    <rdf:Description rdf:about="http://o-def.info/core#language">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- isChildObjectClassOf -->
+    <rdf:Description rdf:about=
+        "http://o-def.info/core#isChildObjectClassOf">
+        <rdf:type rdf:resource=
+           "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- isChildRoleOf -->
+    <rdf:Description rdf:about="http://o-def.info/core#isChildRoleOf">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- isChildPropertyOf -->
+    <rdf:Description rdf:about=
+        "http://o-def.info/core#isChildPropertyOf">
+        <rdf:type rdf:resource=
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </rdf:Description>
+
+<!-- PLUGINS -->
+<!-- O-DEF -->
+    <rdf:Description rdf:about="http://o-def.info/plugins/1">
+        <rdf:type rdf:resource="http://o-def.info/core#Plugin"/>
+        <odef:id>1</odef:id>
+        <odef:name>O-DEF</odef:name>
+        <odef:description>Metadata used to describe the
+            O-DEF itself.</odef:description>
+        <odef:uri>http://o-def.info/plugins/1</odef:uri> 
+        <odef:language>EN</odef:language>
+    </rdf:Description>
+
+<!-- Enterprise-Operation -->
+    <rdf:Description rdf:about="http://o-def.info/plugins/2">
+        <rdf:type rdf:resource="http://o-def.info/core#Plugin"/>
+        <odef:id>2</odef:id>
+        <odef:name>Enterprise-Operation</odef:name>
+        <odef:description>Metadata used to describe the basic
+            operation of an enterprise.</odef:description>
+        <odef:uri>http://o-def.info/plugins/2</odef:uri> 
+        <odef:language>EN</odef:language>
+    </rdf:Description>
+
+<!-- Purchase -->
+    <rdf:Description rdf:about="http://o-def.info/plugins/3">
+        <rdf:type rdf:resource="http://o-def.info/core#Plugin"/>
+        <odef:id>3</odef:id>
+        <odef:name>Purchase</odef:name>
+        <odef:description>Metadata used to describe a purchase
+            of goods or services.</odef:description>
+        <odef:uri>http://o-def.info/plugins/3</odef:uri>
+        <odef:language>EN</odef:language>
+    </rdf:Description>
+
+<!-- OBJECT CLASSES -->
+<!-- Person -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC1">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Person</odef:name>
+        <odef:description>A human being, whether man, woman,
+            or child.</odef:description>
+    </rdf:Description>
+
+<!-- Male Person -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC1.1">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#OC1"/>
+        <odef:name>Male</odef:name>
+        <odef:description>A male person.</odef:description>
+    </rdf:Description>
+
+<!-- Female Person -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC1.2">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#OC1"/>
+        <odef:name>Female</odef:name>
+        <odef:description>A female person.</odef:description>
+    </rdf:Description>
+
+<!-- Enterprise -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC2">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Enterprise</odef:name>
+        <odef:description>A collection of people organized to achieve
+            a common set of goals.</odef:description>
+    </rdf:Description>
+
+<!-- Resource -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC3">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Resource</odef:name>
+        <odef:description>A source or supply from which benefit is
+            produced. Typically resources are materials, energy,
+            services, knowledge, or other assets that are transformed,
+            used or consumed to produce benefit and in the process may
+            be consumed or made unavailable.</odef:description>
+    </rdf:Description>
+
+<!-- Location -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC4">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Location</odef:name>
+        <odef:description>A place or position. Typically locations
+            provide geographic context that characterizes the data
+            element.</odef:description>
+    </rdf:Description>
+
+<!-- Event -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC5">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Event</odef:name>
+        <odef:description>An occurrence happening at a determinable
+            time or times, with or without the participation of
+            human agents.</odef:description>
+    </rdf:Description>
+
+<!-- Condition -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC6">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Condition</odef:name>
+        <odef:description>A particular mode of being of a person or
+            thing; existing state; situation with respect to
+            circumstances.</odef:description>
+    </rdf:Description>
+
+<!-- Environment -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC7">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Environment</odef:name>
+        <odef:description>The natural or man-made surroundings of
+            someone or something.</odef:description>
+    </rdf:Description>
+
+<!-- Law-Rule -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC8">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Law-Rule</odef:name>
+        <odef:description>A law (natural or man-made) or policy that
+            governs a process.</odef:description>
+    </rdf:Description>
+
+<!-- Process -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC9">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Process</odef:name>
+        <odef:description>A series of actions, changes, or functions
+            bringing about a result.</odef:description>
+    </rdf:Description>
+
+<!-- Product -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC10">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Product</odef:name>
+        <odef:description>The result of a process.</odef:description>
+    </rdf:Description>
+
+<!-- Substance -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC11">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Substance</odef:name>
+        <odef:description>A material of a particular
+            kind.</odef:description>
+    </rdf:Description>
+
+<!-- Information-Set -->
+    <rdf:Description rdf:about="http://o-def.info/core#OC12">
+        <rdf:type rdf:resource="http://o-def.info/core#ObjectClass"/>
+        <odef:isChildObjectClassOf rdf:resource=
+            "http://o-def.info/core#Objects"/>
+        <odef:name>Information-Set</odef:name>
+        <odef:description>A collection of information, whether in
+            physical form (such as a book), machine-readable form
+            (such as a file on disc), or human-based form
+            (such as a person’s recollection or an oral
+            tradition).</odef:description>
+    </rdf:Description>
+
+<!-- PROPERTIES -->
+<!-- Identifier -->
+    <rdf:Description rdf:about="http://o-def.info/core#P1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Identifier</odef:name>
+        <odef:description>A value that is intended to identify
+            uniquely the object of the data element.
+            Example identifiers are social security numbers,
+            automobile Vehicle Identification Numbers (VINs), drivers’
+            license numbers, engineering drawing numbers, and part
+            serial numbers.
+            A name can be an identifier in some contexts, but names
+            are usually not used as identifiers because they are often
+            not unique.</odef:description>
+    </rdf:Description>
+
+<!-- URI -->
+    <rdf:Description rdf:about="http://o-def.info/core#P1.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P1"/>
+        <odef:name>URI</odef:name>
+        <odef:description>A Uniform Resource Identifier as defined
+            in RFC 3986.</odef:description>
+    </rdf:Description>
+
+<!-- Name -->
+    <rdf:Description rdf:about="http://o-def.info/core#P2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Name</odef:name>
+        <odef:description>A word or phrase that refers to the object
+            of the data element but is not intended to identify
+            it uniquely.
+            Name is a specialized form of Text.</odef:description>
+    </rdf:Description>
+
+<!-- Family Name -->
+    <rdf:Description rdf:about="http://o-def.info/core#P2.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P2"/>
+        <odef:name>Family</odef:name>
+        <odef:description>A name shared by the people in a
+            family.</odef:description>
+    </rdf:Description>
+
+<!-- Given Name -->
+    <rdf:Description rdf:about="http://o-def.info/core#P2.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P2"/>
+        <odef:name>Given</odef:name>
+        <odef:description>A name given to a person, as distinguished
+            from an inherited family name.</odef:description>
+    </rdf:Description>
+
+<!-- Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Code</odef:name>
+        <odef:description>A value from an enumerated list of possible
+            values that is not an Indicator and that is not subject to
+            continual change.
+            Example codes are telephone area codes, postal zip codes,
+            and country codes.</odef:description>
+    </rdf:Description>
+
+<!-- Language Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3"/>
+        <odef:name>Language</odef:name>
+        <odef:description>A code that indicates a particular human
+            language.</odef:description>
+    </rdf:Description>
+
+<!-- RFC-4646 Language Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.1.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3.1"/>
+        <odef:name>RFC-4646</odef:name>
+        <odef:description>A language tag structured and registered
+            as described in RFC 4646.</odef:description>
+    </rdf:Description>
+
+<!-- Country Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3"/>
+        <odef:name>Country</odef:name>
+        <odef:description>A code that indicates a
+            country.</odef:description>
+    </rdf:Description>
+
+<!-- ISO-3166 Country Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.2.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3.2"/>
+        <odef:name>ISO-3166</odef:name>
+        <odef:description>A code as defined by
+            ISO 3166.</odef:description>
+    </rdf:Description>
+
+<!-- Alpha-2 ISO-3166 Country Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.2.1.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3.2.1"/>
+        <odef:name>Alpha-2</odef:name>
+        <odef:description>A two-letter country code.</odef:description>
+    </rdf:Description>
+
+<!-- Alpha-3 ISO-3166 Country Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.2.1.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3.2.1"/>
+        <odef:name>Alpha-3</odef:name>
+        <odef:description>A three-letter country
+            code.</odef:description>
+    </rdf:Description>
+
+<!-- Numeric ISO-3166 Country Code -->
+    <rdf:Description rdf:about="http://o-def.info/core#P3.2.1.3">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P3.2.1"/>
+        <odef:name>Numeric</odef:name>
+        <odef:description>A three-digit country
+            code.</odef:description>
+    </rdf:Description>
+
+<!-- Indicator -->
+    <rdf:Description rdf:about="http://o-def.info/core#P4">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Indicator</odef:name>
+        <odef:description>A value that is one of only two
+            (true or false) possible choices.
+            Example indicators are temperature high, pressure low,
+            and power on.</odef:description>
+    </rdf:Description>
+
+<!-- Measure -->
+    <rdf:Description rdf:about="http://o-def.info/core#P5">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Measure</odef:name>
+        <odef:description>A numeric quantity that has an explicit
+            or implied unit of measure other than a monetary unit.
+            Example units of measure are miles, degrees centigrade,
+            liters, and meters.</odef:description>
+    </rdf:Description>
+
+<!-- Temperature Measure -->
+    <rdf:Description rdf:about="http://o-def.info/core#5.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#5"/>
+        <odef:name>Temperature</odef:name>
+        <odef:description>A temperature.</odef:description>
+    </rdf:Description>
+
+<!-- Centigrade Temperature Measure -->
+    <rdf:Description rdf:about="http://o-def.info/core#5.1.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#5.1"/>
+        <odef:name>Centigrade</odef:name>
+        <odef:description>A temperature measured in degrees
+            centigrade.</odef:description>
+    </rdf:Description>
+
+<!-- Fahrenheit Temperature Measure -->
+    <rdf:Description rdf:about="http://o-def.info/core#5.1.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#5.1"/>
+        <odef:name>Fahrenheit</odef:name>
+        <odef:description>A temperature measured in degrees
+            Fahrenheit.</odef:description>
+    </rdf:Description>
+
+<!-- Quantity -->
+    <rdf:Description rdf:about="http://o-def.info/core#P6">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Quantity</odef:name>
+        <odef:description>An integral numeric quantity that has no
+            unit of measurement.
+            Examples are the quantity ordered of a product or the
+            number of items in stock.</odef:description>
+    </rdf:Description>
+
+<!-- Amount -->
+    <rdf:Description rdf:about="http://o-def.info/core#P7">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Amount</odef:name>
+        <odef:description>An explicit or implied monetary unit of
+            measure.
+            Example monetary units are Euros, British pounds, US
+            dollars, and Canadian dollars.</odef:description>
+    </rdf:Description>
+
+<!-- Rate -->
+    <rdf:Description rdf:about="http://o-def.info/core#P8">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Rate</odef:name>
+        <odef:description>A real (in the mathematical sense) numeric
+            quantity, possibly expressed as a fraction, but not as a
+            percentage.
+            For example, a divorce rate of 10 marriages per 1000 is a
+            Rate.</odef:description>
+    </rdf:Description>
+
+<!-- Percent -->
+    <rdf:Description rdf:about="http://o-def.info/core#P9">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Percent</odef:name>
+        <odef:description>A numeric quantity expressed as a percentage.
+            Percent is a specialized Rate. If the above divorce rate
+            was expressed as one marriage per hundred, it would be a
+            Percent. Another example Percent is an interest rate on a
+            loan.</odef:description>
+    </rdf:Description>
+
+<!-- Date -->
+    <rdf:Description rdf:about="http://o-def.info/core#P10">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Date</odef:name>
+        <odef:description>A specific date in the progression of time.
+            An example is date-of-birth expressed as year + month +
+            day.</odef:description>
+    </rdf:Description>
+
+<!-- Date-Time -->
+    <rdf:Description rdf:about="http://o-def.info/core#P11">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Date-Time</odef:name>
+        <odef:description>A specific date plus time in the progression
+            of time.
+            An example is the date and time at which a patient’s
+            temperature is taken, expressed as year + month + day +
+            hour + minute. Other examples might specify time more or
+            less precisely; for example, with seconds and microseconds,
+            or without minutes.</odef:description>
+    </rdf:Description>
+
+<!-- Time -->
+    <rdf:Description rdf:about="http://o-def.info/core#P12">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Time</odef:name>
+        <odef:description>A specific time within a specific timeframe.
+            For example, day of month, hour of day, and minute of hour
+            might be used to specify when a regular meeting
+            repeats.</odef:description>
+    </rdf:Description>
+
+<!-- Text -->
+    <rdf:Description rdf:about="http://o-def.info/core#P13">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Text</odef:name>
+        <odef:description>Text that is not an identifier, name, code,
+            indicator, measure, quantity, amount, rate, percent, date,
+            date-time, or time.
+            Examples are descriptions of products offered for sale, the
+            text of contracts, and passwords.</odef:description>
+    </rdf:Description>
+
+<!-- Text.Content -->
+    <rdf:Description rdf:about="http://o-def.info/core#P13.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P13"/>
+        <odef:name>Content</odef:name>
+        <odef:description>The text of the object of the data element.
+            For example, the text of a book.</odef:description>
+    </rdf:Description>
+
+<!-- Description Text -->
+    <rdf:Description rdf:about="http://o-def.info/core#P13.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P13"/>
+        <odef:name>Description</odef:name>
+        <odef:description>Text that describes the object of the data
+            element.</odef:description>
+    </rdf:Description>
+
+<!-- Binary -->
+    <rdf:Description rdf:about="http://o-def.info/core#P14">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#Properties"/>
+        <odef:name>Binary</odef:name>
+        <odef:description>A value that is not an identifier, name,
+            code, indicator, measure, quantity, amount, rate, percent,
+            date, date-time, time, or text.</odef:description>
+    </rdf:Description>
+
+<!-- Graphic Binary -->
+    <rdf:Description rdf:about="http://o-def.info/core#P14.1">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P14"/>
+        <odef:name>Graphic</odef:name>
+        <odef:description>A binary object that is a diagram, graph,
+            mathematical curve, or similar
+            representation.</odef:description>
+    </rdf:Description>
+
+<!-- Picture Binary -->
+    <rdf:Description rdf:about="http://o-def.info/core#P14.2">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P14"/>
+        <odef:name>Picture</odef:name>
+        <odef:description>A binary object that is a visual
+            representation of a person, object, or
+            scene.</odef:description>
+    </rdf:Description>
+
+<!-- Sound Binary -->
+    <rdf:Description rdf:about="http://o-def.info/core#P14.3">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P14"/>
+        <odef:name>Sound</odef:name>
+        <odef:description>A binary object that is capable of creating
+            audio.</odef:description>
+    </rdf:Description>
+
+<!-- Video Binary -->
+    <rdf:Description rdf:about="http://o-def.info/core#P14.4">
+        <rdf:type rdf:resource="http://o-def.info/core#Property"/>
+        <odef:isChildPropertyOf rdf:resource=
+            "http://o-def.info/core#P14"/>
+        <odef:name>Video</odef:name>
+        <odef:description>A binary object that is capable of creating
+            motion pictures.</odef:description>
+    </rdf:Description>
+
+</rdf:RDF>
+
